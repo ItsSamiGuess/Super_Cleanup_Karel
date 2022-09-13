@@ -1,0 +1,80 @@
+
+// This the formatted code for the Super Cleanup activity. 
+
+function start(){
+    sweep();
+    
+    if(rightIsBlocked()){
+        while(leftIsClear()){
+            sweep();
+            goBack();
+            moveUp();
+        }
+        if(leftIsBlocked()){
+            if(ballsPresent()){
+                takeBall();
+            }
+            while(frontIsClear()){
+                if(ballsPresent()){
+                    takeBall();
+                }
+                move();
+            }
+            if(ballsPresent()){
+                takeBall();
+            }
+            goHome();
+        }
+    }
+}
+function goBack(){
+    turnAround();
+    while(frontIsClear()){
+        move();
+    }
+    turnAround();
+}
+    
+function moveUp(){
+    turnLeft();
+    if(ballsPresent()){
+        takeBall();
+    }
+    move();
+    turnRight();
+}
+function sweep(){
+    while(frontIsClear()){
+        if(ballsPresent()){
+            takeBall();
+        }
+        move();
+    }
+    if(frontIsBlocked()){
+        if(facingEast()){
+            if(ballsPresent()){
+                takeBall();
+            }
+            if(leftIsBlocked()){
+                goHome();
+            }
+        }
+    }
+}
+function goHome(){
+    if(facingEast()){
+        turnAround();
+        while(frontIsClear()){
+            move();
+        }
+        if(leftIsBlocked()){
+            turnAround();
+        }else{
+            turnLeft();
+            while(frontIsClear()){
+                move();
+            }
+            turnLeft();
+        }
+    }
+}
