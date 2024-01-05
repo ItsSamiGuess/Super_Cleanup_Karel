@@ -1,80 +1,17 @@
+Hi there,
 
-// This the formatted code for the Super Cleanup activity. 
+I hope this email finds you well. My name is Gareth and I am a Customer Support Specialist for CodeHS. I have come across your GitHub repo for Super Cleanup Karel [https://github.com/ItsSamiGuess/Super_Cleanup_Karel], which looks to be hosting answers to our exercises and assessments.
 
-function start(){
-    sweep();
-    
-    if(rightIsBlocked()){
-        while(leftIsClear()){
-            sweep();
-            goBack();
-            moveUp();
-        }
-        if(leftIsBlocked()){
-            if(ballsPresent()){
-                takeBall();
-            }
-            while(frontIsClear()){
-                if(ballsPresent()){
-                    takeBall();
-                }
-                move();
-            }
-            if(ballsPresent()){
-                takeBall();
-            }
-            goHome();
-        }
-    }
-}
-function goBack(){
-    turnAround();
-    while(frontIsClear()){
-        move();
-    }
-    turnAround();
-}
-    
-function moveUp(){
-    turnLeft();
-    if(ballsPresent()){
-        takeBall();
-    }
-    move();
-    turnRight();
-}
-function sweep(){
-    while(frontIsClear()){
-        if(ballsPresent()){
-            takeBall();
-        }
-        move();
-    }
-    if(frontIsBlocked()){
-        if(facingEast()){
-            if(ballsPresent()){
-                takeBall();
-            }
-            if(leftIsBlocked()){
-                goHome();
-            }
-        }
-    }
-}
-function goHome(){
-    if(facingEast()){
-        turnAround();
-        while(frontIsClear()){
-            move();
-        }
-        if(leftIsBlocked()){
-            turnAround();
-        }else{
-            turnLeft();
-            while(frontIsClear()){
-                move();
-            }
-            turnLeft();
-        }
-    }
-}
+First, I want to commend your CS skills, and to thank you for your interest in CodeHS. We're so glad you've been using our platform to learn computer science and to teach others, and we appreciate your support!
+
+However, I wanted to bring to your attention that hosting these answers in a public repository on Github is causing problems for teachers who rely on our platform to assess their students' understanding and progress. Additionally, it is a violation of our [Terms of Use](https://codehs.com/terms#technology-and-intellectual-property-rights) and [Acceptable Use Policy](https://codehs.com/terms#use-and-conduct).
+
+I would kindly ask that you [set your repository to private](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility) to ensure that your use of CodeHS is in compliance with our terms of use and does not disrupt the learning experience of other students.
+
+If you have any questions or concerns about this, please feel free to reach out to me. I would be happy to help.
+
+Thank you for your understanding and cooperation.
+
+Best regards,
+
+Gareth
